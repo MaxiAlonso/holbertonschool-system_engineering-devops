@@ -18,7 +18,7 @@ The learning objectives for this project were:
 	• How to print the groups a user is in
 	• How to print the effective userid
 
-###For this project we had to write the following scripts:
+### For this project we had to write the following scripts:
 	• 0-iam_betty - switches the current user to the user betty.
 		- We should use exactly 8 characters for your command (+1 character for the new line)
 		- We could assume that the user betty will exist when we will run our script.
