@@ -73,7 +73,7 @@ The learning objectives for this project were:
 	• 13-symbolic_link - creates a symbolic link to /bin/ls, named __ls__. The symbolic link should be created in the current working directory.
 	• 14-copy_html - copies all the HTML files from the current working directory to the parent of the working directory, but only copy files that did not exist in the parent of the working directory or were newer than the versions in the parent of the working directory.
 	We could consider that all HTML files have the extension .html
-	• 100-lets_move - moves all files beginning with an uppercase letter to the directory /tmp/u. We could assume that the directory /tmp/u will exist when we will run your script
+	• 100-lets_move - moves all files beginning with an uppercase letter to the directory /tmp/u. We could assume that the directory /tmp/u will exist when we will run your script.
 	• 101-clean_emacs - deletes all files in the current working directory that end with the character ~.
 	• 102-tree - creates the directories welcome/, welcome/to/ and welcome/to/school in the current directory. 
 	We were only allowed to use two spaces (and lines) in the script, not more.
