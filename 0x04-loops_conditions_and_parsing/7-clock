@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#Script that displays Best School 10 times, but for the 9th iteration, displays Best School and then Hi on a new line.
+h=0; while [ $h -le 12 ]; do x=1; case $x in 1) echo "Hour: $h"; esac; while [ $x -le 59 ]; do echo "$x"; x=$((x+1)); done; h=$((h+1)); done
