@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#Script that displays Best Sch ol 10 times.
+for FILE in *; do echo "$FILE" | cut -d "-" -f2; done
