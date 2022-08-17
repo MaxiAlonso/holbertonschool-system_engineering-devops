@@ -2,7 +2,7 @@
 
 package { 'nginx':
 }
-
+ 
 file { '/var/www/html/index.nginx-debian.html':
   content => 'Hello World!',
 }
