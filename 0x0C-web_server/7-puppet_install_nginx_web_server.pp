@@ -1,5 +1,4 @@
-package { 'nginx':
-}
+# Configure an Nginx server using Puppet instead of Bash
 
 file { '/var/www/html/index.nginx-debian.html':
   content => 'Hello World!',
