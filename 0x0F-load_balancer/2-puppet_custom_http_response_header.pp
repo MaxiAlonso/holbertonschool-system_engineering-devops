@@ -13,7 +13,7 @@ package { 'nginx':
 file_line { 'Header response':
   ensure  => 'present',
   path    => '/etc/nginx/sites-available/default',
-  after   => 'listen 80 default_server;',
+  after   => 'server_name _;',
   line    => 'add_header X-Served-By $hostname;',
   require => Package['nginx'],
 }
