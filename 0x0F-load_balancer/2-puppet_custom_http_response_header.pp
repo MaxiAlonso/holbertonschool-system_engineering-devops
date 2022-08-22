@@ -6,14 +6,15 @@ exec { 'apt-get update':
 }
 
 package { 'nginx':
+  ensure  => installed,
   require => Exec['apt-get-update'],
 }
 
-file_line { 'Header response':
-  ensure   => present,
-  path     => '/etc/nginx/sites-available/default',
-  after    => 'server_name _;',
-  line     => 'add_header X-Served-By $hostname',
+file_line { 'header response':
+  ensure  => 'present',
+  path    => '/etc/nginx/sites-available/default',
+  after   => 'server_name _;',
+  line    => 'add_header X-Served-By $hostname;',
   require => Package['nginx'],
 }
 
