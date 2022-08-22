@@ -7,7 +7,7 @@ exec { 'apt-get update':
 
 package { 'nginx':
   ensure  => installed,
-  require => Exec['apt-get-update'],
+  require => Exec['apt-get update'],
 }
 
 file_line { 'Header response':
