@@ -17,8 +17,8 @@ global
         ssl-default-bind-ciphersuites TLS_AES_128_GCM_SHA256:TLS_AES_256_GCM_SHA384:TLS_CHACHA20_POLY1305_SHA256
         ssl-default-bind-options ssl-min-ver TLSv1.2 no-tls-tickets
 
-maxconn 2048
-tune.ssl.default-dh-param 2048
+        maxconn 2048
+        tune.ssl.default-dh-param 2048
 
 defaults
         log     global
@@ -36,8 +36,8 @@ defaults
         errorfile 503 /etc/haproxy/errors/503.http
         errorfile 504 /etc/haproxy/errors/504.http
 
-option forwardfor
-option http-server-close
+        option forwardfor
+        option http-server-close
 
 frontend www-http
    bind *:80
@@ -54,8 +54,8 @@ frontend www-https
 backend www-backend
    balance roundrobin
    redirect scheme https if !{ ssl_fc }
-   server 4387-web-01 34.227.197.193 check
-   server 4387-web-02 52.55.214.253 check
+   server 4387-web-01 34.227.197.193:80 check
+   server 4387-web-02 52.55.214.253:80 check
 
 backend letsencrypt-backend
    server letsencrypt 127.0.0.1:54321
