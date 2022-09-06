@@ -4,8 +4,6 @@ Script that, using this REST API, for a given employee ID,
 returns information about his/her TODO list progress.
 """
 
-from asyncio import exceptions
-from tokenize import Token
 import requests
 from sys import argv
 
