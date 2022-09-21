@@ -15,12 +15,10 @@ def number_of_subscribers(subreddit):
     """
 
     url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
-    # Get a copy of the default headers that requests would use
-    headers = requests.utils.default_headers()
-    headers.update({'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)\
-    AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36'})
-    response = requests.get(url, headers=headers).json()
-    suscribers = response.get('data').get('subscribers')
-    if suscribers is None:
-        return (0)
-    return (suscribers)
+    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)\
+    AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36'}
+    response = requests.get(url, headers=headers, allow_redirects=False)
+    if response.status_code == 200:
+        suscribers = response.json().get('data').get('subscribers')
+        return (suscribers)
+    return (0)
