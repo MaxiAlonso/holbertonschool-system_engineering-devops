@@ -1,6 +1,6 @@
 # 0. Strace is your friend
 
 exec { 'fix':
-  command => "sed -i 's/.phpp/.php/' /var/www/html/wp-settings.php",
-  path    => '/usr/local/bin',
+  command => "sed -i 's/class-wp-locale.phpp/class-wp-locale.php/g' /var/www/html/wp-settings.php",
+  path    => '/bin',
 }
